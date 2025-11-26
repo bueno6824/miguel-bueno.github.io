@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="style/bootstrap-5.3.8-dist/css/bootstrap.css">
+
+    <script src="js/sweetalert.min.js"></script>
+    <script src="style/bootstrap-5.3.8-dist/jquery/jquery.js" type="text/javascript"></script>
+    <script src="js/sha256.js"></script>
+
+</head>
+
+<body id="body"
+    class="home wp-singular page-template page-template-page-templates page-template-home-page page-template-page-templateshome-page-php page page-id-5 wp-theme-prostarterwp">
+    <header>
+        <nav class="navbar navbar-expand-lg" id="nav" style="padding: 10px; padding-top: 0;">
+            <div class="header" id="header" style="padding-top: 0;">
+                <div class="header_logo">
+                    <a class="nav-link logo" href=""></a>
+                    <span style="font-size: 30px">TRANSALVANIA</span>
+                </div>
+
+                <div class="header_menu">
+                    <div class="header__navigation" id="main-menu">
+                        <ul class="site-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Acerca de...</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Herramientas</a>
+                            </li>
+                        </ul>
+                        <div class="line-menu" style="left: 5px; width: 72.7188px"></div>
+                    </div>
+                </div>
+
+                <div class="header__cta">
+                    <a class="nav-link button" href="">Contacto</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="d-md-flex flex-md-equals w-100 md-3 pl-md-3 home_grid" style="background: #f7f2f2;">
+            <div class="col-sm-12 text-center rounded-md-3 border-primary principal">
+
+                <!--Contenedor 1-->
+                <section class="py-4 text-center box box-about box-4w">
+                    <div class="content-about">
+                        <h1 class="display-4 text-weight text-center mb-3">
+                            Bienvenido a Transarvania
+                        </h1>
+                        <p class="text-center">
+                            La Biblioteca Transalvania tiene como objetivo la difusión de la
+                            literatura y las letras hispanomericanas en el mundo, y ofrece a
+                            través de la Red libre acceso a sus fondos, compuestos por miles
+                            de registros bibliográficos. Esta biblioteca pone a tu disposición
+                            material, contenidos e información recursos educativos creados y
+                            mantenidos por varias organizaciones públicas y privadas.
+                        </p>
+                    </div>
+                </section>
+
+
+
+                <!--Contenedor 2-->
+                <section class="content-dark-twitter box-dark-twitter">
+                    <!--Subcontenedor 1-->
+                    <div class="box box-light">
+                        <div class="content-light">
+                            <label class="switch">
+                                <input class="switch__input" id="switch__input" type="checkbox"
+                                    onclick="cargarDark()" />
+                                <span class="switch__background">
+                                    <span class="switch__toggle"> </span>
+                                    <span class="switch__stars"></span>
+                                    <span class="switch__clouds"></span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <!--Subcontenedor 2-->
+                    <div class="box box-twitter" style="margin-top: 15px;">
+                        <div class="content-social"> <svg width="150" height="150" viewBox="0 0 300 271" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_46_2)">
+                                    <path
+                                        d="M236 0H282L181 115L299 271H206.4L133.9 176.2L50.9 271H4.89999L111.9 148L-1.10001 0H93.8L159.3 86.6L236 0ZM219.9 244H245.4L80.4 26H53L219.9 244Z"
+                                        fill="white"></path>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_46_2">
+                                        <rect width="300" height="271" fill="white"></rect>
+                                    </clipPath>
+                                </defs>
+                            </svg> <a href="https://twitter.com/robzaccardi" class="button" rel="nofollow"> <svg
+                                    id="Arrow.7" xmlns="http://www.w3.org/2000/svg" width="18.256" height="18.256"
+                                    viewBox="0 0 18.256 18.256" style="transition:.3s">
+                                    <g id="Group_7" data-name="Group 7" transform="translate(5.363 5.325)">
+                                        <path id="Path_10" data-name="Path 10" d="M14.581,7.05,7.05,14.581"
+                                            transform="translate(-7.05 -7.012)" fill="none" stroke="#0D1117"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                                        <path id="Path_11" data-name="Path 11" d="M10,7l5.287.037.038,5.287"
+                                            transform="translate(-7.756 -7)" fill="none" stroke="#0D1117"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                                    </g>
+                                    <path id="Path_12" data-name="Path 12" d="M0,0H18.256V18.256H0Z" fill="none"></path>
+                                </svg> </a></div>
+                    </div>
+                </section>
+
+
+
+
+                <!--Contenedor 3-->
+                <section class="box box-work-1 box-2h box-2w">
+                    <div class="content-work">
+                        <img class="bg"
+                            src="http://robertozaccardi.dev/wp-content/uploads/2024/05/rob_bg_colors_2-1-1.jpg"
+                            alt="" />
+                        <a href="https://magicitems.net/" class="button" rel="nofollow"
+                            style="position: absolute; bottom: 10px; left: 10px;">
+                            <p>Magic Items</p>
+                            <svg id="Arrow.7" xmlns="http://www.w3.org/2000/svg" width="18.256" height="18.256"
+                                viewBox="0 0 18.256 18.256" style="transition: 0.3s">
+                                <g id="Group_7" data-name="Group 7" transform="translate(5.363 5.325)">
+                                    <path id="Path_10" data-name="Path 10" d="M14.581,7.05,7.05,14.581"
+                                        transform="translate(-7.05 -7.012)" fill="none" stroke="#0D1117"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                                    <path id="Path_11" data-name="Path 11" d="M10,7l5.287.037.038,5.287"
+                                        transform="translate(-7.756 -7)" fill="none" stroke="#0D1117"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                                </g>
+                                <path id="Path_12" data-name="Path 12" d="M0,0H18.256V18.256H0Z" fill="none"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </section>
+
+
+
+
+                <!--Contenedor 4-->
+                <section id="" class="py-4 text-center box box-about-cv box-3w" style="height: 350px;">
+                    <div class="content-about-cv">
+                        <h1 class="display-4 text-weight text-center mb-3">
+                            cv
+                        </h1>
+                        <p class="text-center">
+                            La Biblioteca Transalvania tiene como objetivo la difusión de la
+                            literatura y las letras hispanomericanas en el mundo, y ofrece a
+                            través de la Red libre acceso a sus fondos, compuestos por miles
+                            de registros bibliográficos. Esta biblioteca pone a tu disposición
+                            material, contenidos e información recursos educativos creados y
+                            mantenidos por varias organizaciones públicas y privadas.
+                        </p>
+                    </div>
+
+                </section>
+
+
+
+
+                <!--Contenedor 5-->
+
+
+
+
+
+                <div class="box box-2w box-linkedin">
+                    <div class="content-social"> <svg class="linkedin-icon" width="75.121" height="61.052"
+                            viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4.98 2.5C4.98 3.881 3.87 5 2.5 5C1.13 5 0.02 3.881 0.02 2.5C0.02 1.12 1.13 0 2.5 0C3.87 0 4.98 1.12 4.98 2.5ZM5 7H0V23H5V7ZM12.982 7H8.014V23H12.983V14.601C12.983 9.931 19.012 9.549 19.012 14.601V23H24V12.869C24 4.989 15.078 5.276 12.982 9.155V7Z"
+                                fill="white"></path>
+                        </svg> <a href="https://www.linkedin.com/in/zacrob/" class="button" rel="nofollow"> <svg
+                                id="Arrow.7" xmlns="http://www.w3.org/2000/svg" width="18.256" height="18.256"
+                                viewBox="0 0 18.256 18.256" style="transition:.3s">
+                                <g id="Group_7" data-name="Group 7" transform="translate(5.363 5.325)">
+                                    <path id="Path_10" data-name="Path 10" d="M14.581,7.05,7.05,14.581"
+                                        transform="translate(-7.05 -7.012)" fill="none" stroke="#0D1117"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                                    <path id="Path_11" data-name="Path 11" d="M10,7l5.287.037.038,5.287"
+                                        transform="translate(-7.756 -7)" fill="none" stroke="#0D1117"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                                </g>
+                                <path id="Path_12" data-name="Path 12" d="M0,0H18.256V18.256H0Z" fill="none"></path>
+                            </svg> </a></div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+                <!--Contenedor 6-->
+                <section class="box box-work-1 box-4w">
+                    <div class="content-work">
+                        <img class="bg"
+                            src="http://robertozaccardi.dev/wp-content/uploads/2024/05/rob_bg_colors_2-1-1.jpg"
+                            alt="" />
+                        <a href="https://magicitems.net/" class="button" rel="nofollow"
+                            style="position: absolute; bottom: 10px; left: 10px;">
+                            <p>Magic Items</p>
+                            <svg id="Arrow.7" xmlns="http://www.w3.org/2000/svg" width="18.256" height="18.256"
+                                viewBox="0 0 18.256 18.256" style="transition: 0.3s">
+                                <g id="Group_7" data-name="Group 7" transform="translate(5.363 5.325)">
+                                    <path id="Path_10" data-name="Path 10" d="M14.581,7.05,7.05,14.581"
+                                        transform="translate(-7.05 -7.012)" fill="none" stroke="#0D1117"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                                    <path id="Path_11" data-name="Path 11" d="M10,7l5.287.037.038,5.287"
+                                        transform="translate(-7.756 -7)" fill="none" stroke="#0D1117"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                                </g>
+                                <path id="Path_12" data-name="Path 12" d="M0,0H18.256V18.256H0Z" fill="none"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </section>
+
+
+
+
+
+                <!--Contenedor 7-->
+                <section class="box box-work-1 box-3w">
+                    <div class="content-work">
+                        <img class="bg"
+                            src="http://robertozaccardi.dev/wp-content/uploads/2024/05/rob_bg_colors_2-1-1.jpg"
+                            alt="" />
+                        <a href="https://magicitems.net/" class="button" rel="nofollow"
+                            style="position: absolute; bottom: 10px; left: 10px;">
+                            <p>Magic Items</p>
+                            <svg id="Arrow.7" xmlns="http://www.w3.org/2000/svg" width="18.256" height="18.256"
+                                viewBox="0 0 18.256 18.256" style="transition: 0.3s">
+                                <g id="Group_7" data-name="Group 7" transform="translate(5.363 5.325)">
+                                    <path id="Path_10" data-name="Path 10" d="M14.581,7.05,7.05,14.581"
+                                        transform="translate(-7.05 -7.012)" fill="none" stroke="#0D1117"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                                    <path id="Path_11" data-name="Path 11" d="M10,7l5.287.037.038,5.287"
+                                        transform="translate(-7.756 -7)" fill="none" stroke="#0D1117"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                                </g>
+                                <path id="Path_12" data-name="Path 12" d="M0,0H18.256V18.256H0Z" fill="none"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </section>
+
+
+
+
+                <!--Contenedor 8-->
+                <div class="container content-maps">
+                    <section id="ubicacion" class="box box-4w">
+                        <div id="map"></div>
+                    </section>
+
+                    <section id="ubicacion_info" class="box box-3w">
+                        <h5>Esta es la ubicacion de la biblioteca principal:</h5>
+                        <p>
+                            Blvd. Universidad Tecnologia 225 col.San Carlos la Roncha <br />
+                            C.P. 37670 León, Gto, México <br />
+                            Telefono: 4777100020 <br />
+                            <a href="https://utleon.edu.mx/">Has click para ir a la pagina Principal</a>
+                        </p>
+                    </section>
+                </div>
+
+
+
+
+
+
+
+
+
+                <!--Contenedor 9-->
+                <div id="container content-email" class="box-3w">
+                    <section id="formulario">
+                        <form id="secion" method="POST"
+                            action="mailto:bueno6824@gmail.com?subject= Tengo un problema o una duda de Transalvania"
+                            enctype="text/plain">
+                            <!--<h1 class="display-4 text-weight text-center mb-3">CONTACTO</h1>-->
+                            <legend>Contacto</legend>
+                            <h5>
+                                Si tienes alguna duda, sugerencia o problema mande un mensaje o
+                                un <br />
+                                correo explicando su duda en cualquiera de los siguientes
+                                enlaces:
+                            </h5>
+                            <div class="form-group">
+                                <label for="txtCorreo">Correo</label>
+                                <input type="email" class="form-control" id="txtCorreo" placeholder="Correo"
+                                    required="" />
+                                <small id="emailHelp" class="form-text text-muted"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtMensaje">Escribe aqui tu mensaje:</label>
+                                <textarea class="form-control" name="txtMensaje" placeholder="Escribe aqui tu mensaje"
+                                    required=""></textarea>
+                            </div>
+                            <br />
+                            <button class="btn boton btn-outline-dark" type="reset" name="Limpiar" value="Limpiar">
+                                Limpiar
+                            </button>
+                            <button class="btn boton btn-outline-dark" type="submit" name="enviar" value="Enviar">
+                                Enviar
+                            </button>
+                            <br />
+                            <br />
+                        </form>
+                    </section>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="container box-8w">
+                    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                        <div class="col-md-4 d-flex align-items-center">
+                            <a href="/" class="mb-3 me-2 mb-md-0 text-decoration-none lh-1">
+                                <svg class="bi" width="30" height="24">
+                                    <use xlink:href="#bootstrap"></use>
+                                </svg>
+                            </a>
+                            <span class="mb-3 mb-md-0">© 2024 Company, Inc</span>
+                        </div>
+
+                        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                            <li class="ms-3">
+                                <a class="" href="#"><svg class="bi" width="24" height="24">
+                                        <use xlink:href="#twitter"></use>
+                                    </svg></a>
+                            </li>
+                            <li class="ms-3">
+                                <a class="" href="#"><svg class="bi" width="24" height="24">
+                                        <use xlink:href="#instagram"></use>
+                                    </svg></a>
+                            </li>
+                            <li class="ms-3">
+                                <a class="" href="#"><svg class="bi" width="24" height="24">
+                                        <use xlink:href="#facebook"></use>
+                                    </svg></a>
+                            </li>
+                        </ul>
+                    </footer>
+                </div>
+
+                <button id="scrollTopBtn" onclick="scrollToTop()" style="display: none">
+                    ↑
+                </button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+    </div>
+    </div>
+
+
+    <script type="text/javascript" src="js/funciones.js"></script>
+    <script src="style/bootstrap-5.3.8-dist/js/bootstrap.js"></script>
+    <script src="style/bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
+
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2o8i6W4beLVbijCl3qdayBsICwblrcGA&callback=initMap"></script>
+</body>
+
+</html>
