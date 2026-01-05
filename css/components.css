@@ -2,13 +2,6 @@
    BOTONES / ICONOS / TOGGLES
 =========================== */
 
-/* Hamburguesa */
-.navbar-toggler-icon,
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after {
-  background: currentColor;
-}
-
 /* Animación navbar */
 .navbar-collapse.show {
   animation: slideDown 0.3s ease;
@@ -27,13 +20,35 @@
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(10px);
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0.25rem;
 }
+
+/* Área clickeable correcta */
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-toggler:hover {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+}
+
+body.dark .navbar-toggler:hover {
+  background: rgba(0, 0, 0, 0.35);
+}
+
 
 body.dark .navbar-toggler {
   background: rgba(0, 0, 0, 0.35);
 }
+
 
 
 @keyframes slideDown {
