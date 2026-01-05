@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio - Miguel</title>
+  <!-- Favicon modo claro -->
+  <link rel="icon" media="(prefers-color-scheme: light)" href="img/favicon-dark-2.png" type="image/png">
+
+  <!-- Favicon modo oscuro -->
+  <link rel="icon" media="(prefers-color-scheme: dark)" href="img/favicon-light-2.png" type="image/png">
+
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css" />
+
+  <!-- Scripts -->
+  <script src="js/sweetalert.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+  <script src="bootstrap-5.3.8-dist/jquery/jquery.min.js"></script>
+  <script src="js/sha256.js"></script>
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="130" tabindex="0">
+  <div id="scroll-progress"></div>
+  <header class="header">
+    <nav class="navbar navbar-expand-lg w-100">
+
+      <!-- Logo -->
+      <div class="contenedor-logo d-flex align-items-center">
+        <img src="img/perfil.png" alt="Logo" class="logo-img" />
+        <span class="logo-texto">TRANSALVANIA</span>
+      </div>
+
+      <!-- BOTÓN HAMBURGUESA -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal"
+        aria-controls="menu-principal" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- MENÚ COLAPSABLE -->
+      <div class="collapse navbar-collapse contenedor-menu" id="menu-principal">
+
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#inicio">INICIO</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#acerca_de">ACERCA DE</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#proyectos">PROYECTOS</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#herramientas">HERRAMIENTAS</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#ubicacion">UBICACION</a>
+          </li>
+
+          <!-- BOTÓN DARK MODE -->
+          <li class="nav-item nav-dark-toggle">
+            <button id="toggle_dark" class="toggle_dark" aria-label="Cambiar tema">
+              <span class="icon sun">☀️</span>
+              <span class="icon moon">🌙</span>
+            </button>
+          </li>
+
+
+          <!-- BOTÓN CONTACTO EN MÓVIL -->
+          <li class="nav-item d-lg-none mt-2">
+            <a class="nav-link btn-contacto text-center" href="#" data-bs-toggle="modal"
+              data-bs-target="#modal_contacto">
+              CONTACTO
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+      <!-- BOTÓN CONTACTO DESKTOP -->
+      <div class="contenedor-cta d-none d-lg-block">
+        <a class="nav-link btn-contacto" href="#" data-bs-toggle="modal" data-bs-target="#modal_contacto">
+          CONTACTO
+        </a>
+      </div>
+
+    </nav>
+  </header>
+
+
+  <!-- ===== MAIN ===== -->
+  <main class="contenido-principal">
+
+    <!-- ===== HERO / INICIO ===== -->
+    <section id="inicio" class="seccion-inicio">
+      <div class="inicio-contenido">
+        <h1 class="titulo-principal">HOLA, SOY MIGUEL ANGEL.</h1>
+
+        <div class="descripcion-inicio">
+          <p class="texto-descriptivo">
+            Un desarrollador web orientado a resultados que crea y administra
+            sitios web y aplicaciones web enfocadas al éxito del producto.
+          </p>
+          <img class="avatar-img" src="svg/mf-avatar.svg" alt="Avatar">
+        </div>
+
+        <div class="inicio-boton">
+          <a href="#proyectos" class="btn btn--bg">Proyectos</a>
+        </div>
+      </div>
+
+      <!-- Redes flotantes -->
+      <div class="redes-flotantes">
+        <a href="https://linkedin.com/in/rammcodes" target="_blank" class="icono-red">
+          <img src="./svg/linkedin.svg">
+        </a>
+
+        <a href="https://twitter.com/rammcodes" target="_blank" class="icono-red">
+          <img src="./svg/twitter.svg">
+        </a>
+
+        <a href="https://youtube.com" target="_blank" class="icono-red">
+          <img src="./svg/youtube.svg">
+        </a>
+
+        <a href="https://github.com" target="_blank" class="icono-red">
+          <img src="./svg/github.svg">
+        </a>
+
+        <a href="https://dev.to" target="_blank" class="icono-red">
+          <img src="./svg/libro-alt.svg">
+        </a>
+      </div>
+
+      <div class="imagen-inferior">
+        <img src="svg/hero-devices.svg" class="hero-img-bottom">
+      </div>
+    </section>
+
+    <!-- ===== ACERCA DE ===== -->
+    <section id="acerca_de" class="seccion-acerca">
+
+      <div class="contenedor-general">
+        <h2 class="titulo-seccion">Sobre mí</h2>
+        <p class="subtitulo-seccion">
+          Más información sobre quién soy, qué hago y mis habilidades actuales.
+        </p>
+
+        <div class="acerca-contenido">
+
+          <div class="acerca-texto">
+            <h3 class="titulo-subseccion">Conóceme</h3>
+
+            <p>
+              Soy un <strong>Desarrollador Web Frontend</strong> enfocado en
+              crear interfaces atractivas y funcionales. Puedes ver mis
+              proyectos en la sección <strong>Proyectos</strong>.
+            </p>
+
+            <p>
+              Me gusta compartir conocimiento sobre
+              <strong>Desarrollo Web</strong> y ayudar a otros desarrolladores.
+              Puedes seguirme en
+              <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+              o
+              <a href="https://instagram.com" target="_blank">Instagram</a>.
+            </p>
+
+            <p>
+              Estoy abierto a oportunidades laborales donde pueda crecer,
+              contribuir y aprender. Si tienes alguna propuesta, no dudes en
+              <strong>contactarme</strong>.
+            </p>
+
+            <a href="#modal_contacto" data-bs-toggle="modal" class="btn btn--bg">Contactar</a>
+          </div>
+
+          <!-- Habilidades -->
+          <div class="acerca-habilidades">
+            <h3 class="titulo-subseccion">Habilidades</h3>
+
+            <div class="lista-habilidades">
+              <span class="habilidad-item">HTML</span>
+              <span class="habilidad-item">CSS</span>
+              <span class="habilidad-item">JavaScript</span>
+              <span class="habilidad-item">React</span>
+              <span class="habilidad-item">WordPress</span>
+              <span class="habilidad-item">PHP</span>
+              <span class="habilidad-item">SASS</span>
+              <span class="habilidad-item">Git</span>
+              <span class="habilidad-item">GitHub</span>
+              <span class="habilidad-item">Responsive Design</span>
+              <span class="habilidad-item">SEO</span>
+              <span class="habilidad-item">Terminal</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- CONTENEDOR DE PROYECTOS -->
+    <section id="proyectos" class="seccion-proyectos py-5">
+      <div class="container">
+        <h2 class="titulo-seccion mb-4">Proyectos</h2>
+
+
+        <div class="row g-4">
+          <!-- Tarjeta 1 -->
+          <div class="col-md-4">
+            <div class="tarjeta-proyecto">
+              <div class="contenedor-img">
+                <img src="img/proyecto1.jpg" class="img-fluid imagen-proyecto" alt="proyecto ejemplo 1">
+
+                <!-- DESCRIPCIÓN FLOTANTE -->
+                <div class="overlay-proyecto">
+                  <p>Descripción del proyecto al pasar el mouse. Lo que quieras explicar rápido.</p>
+                </div>
+              </div>
+
+              <div class="contenido-proyecto text-center">
+                <h3>Portafolio Personal</h3>
+                <p>Portafolio personal con HTML, CSS y JS, diseño responsive y dark mode funcional.</p>
+                <a href="#" class="btn btn-primary btn-ver-mas" target="_blank" data-bs-toggle="modal"
+                  data-bs-target="#modalProyecto" data-titulo="proyecto ejemplo 1" data-imagen="img/proyecto1.jpg"
+                  data-descripcion="
+🎯 Objetivo: Crear un portafolio personal para mostrar proyectos frontend. 
+🛠 Tecnologías: HTML, CSS y JavaScript puro para reforzar fundamentos. 
+⚡ Retos: Diseño responsive, dark mode persistente y estructura clara del código. 
+📈 Resultado: Mejor organización del código y experiencia de usuario; modal funcional y atractivo.">Ver
+                  más</a>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <!-- Tarjeta 2 -->
+          <div class="col-md-4">
+            <div class="tarjeta-proyecto">
+              <div class="contenedor-img">
+                <img src="img/proyecto2.jpg" class="img-fluid imagen-proyecto" alt="proyecto ejemplo 2">
+
+                <!-- DESCRIPCIÓN FLOTANTE -->
+                <div class="overlay-proyecto">
+                  <p>Descripción del proyecto al pasar el mouse. Lo que quieras explicar rápido.</p>
+                </div>
+              </div>
+
+              <div class="contenido-proyecto text-center">
+                <h3>proyecto ejemplo 2</h3>
+                <p>Descripción corta del proyecto. Algo rápido y entendible.</p>
+                <a href="#" class="btn btn-primary btn-ver-mas" target="_blank" data-bs-toggle="modal"
+                  data-bs-target="#modalProyecto" data-titulo="proyecto ejemplo 2" data-imagen="img/proyecto2.jpg"
+                  data-descripcion="Esta es una descripción más extensa del proyecto. Aquí puedes explicar tecnologías usadas, objetivos, retos, aprendizajes y resultados finales.">Ver
+                  más</a>
+              </div>
+            </div>
+
+          </div>
+
+
+
+          <!-- Tarjeta 3 -->
+          <div class="col-md-4">
+            <div class="tarjeta-proyecto">
+              <div class="contenedor-img">
+                <img src="img/proyecto3.jpg" class="img-fluid imagen-proyecto" alt="proyecto ejemplo 3">
+
+                <!-- DESCRIPCIÓN FLOTANTE -->
+                <div class="overlay-proyecto">
+                  <p>Descripción del proyecto al pasar el mouse. Lo que quieras explicar rápido.</p>
+                </div>
+              </div>
+
+              <div class="contenido-proyecto text-center">
+                <h3>proyecto ejemplo 3</h3>
+                <p>Descripción corta del proyecto. Algo rápido y entendible.</p>
+                <a href="#" class="btn btn-primary btn-ver-mas" target="_blank" data-bs-toggle="modal"
+                  data-bs-target="#modalProyecto" data-titulo="proyecto ejemplo 3" data-imagen="img/proyecto3.jpg"
+                  data-descripcion="Esta es una descripción más extensa del proyecto. Aquí puedes explicar tecnologías usadas, objetivos, retos, aprendizajes y resultados finales.">Ver
+                  más</a>
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+
+
+
+
+          <!-- Tarjeta 4 -->
+          <div class="col-md-4">
+            <div class="tarjeta-proyecto">
+              <div class="contenedor-img">
+                <img src="img/proyecto4.jpg" class="img-fluid imagen-proyecto" alt="proyecto ejemplo 4">
+
+                <!-- DESCRIPCIÓN FLOTANTE -->
+                <div class="overlay-proyecto">
+                  <p>Descripción del proyecto al pasar el mouse. Lo que quieras explicar rápido.</p>
+                </div>
+              </div>
+
+              <div class="contenido-proyecto text-center">
+                <h3>proyecto ejemplo 4</h3>
+                <p>Descripción corta del proyecto. Algo rápido y entendible.</p>
+                <a href="#" class="btn btn-primary btn-ver-mas" target="_blank" data-bs-toggle="modal"
+                  data-bs-target="#modalProyecto" data-titulo="proyecto ejemplo 4" data-imagen="img/proyecto4.jpg"
+                  data-descripcion="Esta es una descripción más extensa del proyecto. Aquí puedes explicar tecnologías usadas, objetivos, retos, aprendizajes y resultados finales.">Ver
+                  más</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- CONTENEDOR DE HERRAMIENTAS -->
+    <section id="herramientas" class="seccion-herramientas py-5">
+      <div class="container">
+        <h2 class="titulo-seccion mb-4">Herramientas</h2>
+
+        <div class="row g-4 herramientas-grid">
+          <div class="col-6 col-md-3">
+            <div class="tarjeta-herramienta">
+              <img src="svg/html5.svg" alt="HTML5">
+              <p>HTML5</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <div class="tarjeta-herramienta">
+              <img src="svg/css3.svg" alt="CSS3">
+              <p>CSS3</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <div class="tarjeta-herramienta">
+              <img src="svg/java-script-js-seeklogo.svg" alt="JavaScript">
+              <p>JS</p>
+            </div>
+          </div>
+
+
+          <div class="col-6 col-md-3">
+            <div class="tarjeta-herramienta">
+              <img src="svg/php.svg" alt="PHP">
+              <p>PHP</p>
+            </div>
+          </div>
+
+
+          <div class="col-6 col-md-3">
+            <div class="tarjeta-herramienta">
+              <img src="svg/MySQL-01.svg" alt="Mysql Workbench ">
+              <p>Mysql Workbench </p>
+            </div>
+          </div>
+
+
+          <div class="col-6 col-md-3">
+            <div class="tarjeta-herramienta">
+              <img src="svg/Java-01.svg" alt="Java">
+              <p>Java</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <div class="tarjeta-herramienta">
+              <img src="svg/rest-api-icon.svg" alt="REST API">
+              <p>REST API</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <div class="tarjeta-herramienta">
+              <img src="svg/bootstrap.svg" alt="Bootstrap">
+              <p>Bootstrap</p>
+            </div>
+          </div>
+
+        </div>
+    </section>
+
+
+    <section id="ubicacion" class="seccion-ubicacion py-5">
+      <div class="container">
+        <h2 class="titulo-seccion mb-4">Ubicacion</h2>
+        <p>Actualmente en León, Guanajuato, México</p>
+
+        <div class="row g-4 herramientas-grid">
+          <div class="map-glass">
+            <div id="map"></div>
+            <div class="map-overlay"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <span class="footer-text">© 2024 Miguel</span>
+      <div class="footer-redes">
+        <a href="twitter" aria-label="Twitter"><img src="svg/twitter.svg" alt="Twitter"></a>
+        <a href="instagram" aria-label="Instagram"><img src="svg/instagram.svg" alt="Instagram"></a>
+        <a href="facebook" aria-label="Facebook"><img src="svg/facebook.svg" alt="Facebook"></a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ===== BOTÓN IR ARRIBA ===== -->
+  <button id="btn-ir-arriba" onclick="scrollToTop()"><img src="/svg/flecha-pequena-arriba.svg" style="width: 30px;"
+      alt=""></button>
+
+
+  <!-- ===== MODAL DE CONTACTO ===== -->
+  <div class="modal fade" id="modal_contacto" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title">Contacto</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+          <form id="form-contacto">
+
+            <p>Disponible para proyectos y colaboración</p>
+
+            <label class="mt-3">Correo</label>
+            <input type="email" name="correo" class="form-control" placeholder="Correo" required />
+
+            <label class="mt-3">Mensaje</label>
+            <textarea name="mensaje" class="form-control" placeholder="Escribe tu mensaje" required></textarea>
+
+            <div class="mt-4 d-flex gap-2">
+              <button type="reset" class="btn btn-dark">Limpiar</button>
+              <button type="submit" class="btn btn-dark" id="btnEnviar">Enviar</button>
+            </div>
+
+          </form>
+
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== MODAL DE PROYECTO ===== -->
+  <div class="modal fade" id="modalProyecto" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitulo"></h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+          <img id="modalImagen" class="img-fluid rounded mb-3" alt="">
+          <p id="modalDescripcion"></p>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Scripts -->
+  <script type="module" src="js/main.js"></script>
+  <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2o8i6W4beLVbijCl3qdayBsICwblrcGA&callback=initMap"></script>
+  <script src="bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>

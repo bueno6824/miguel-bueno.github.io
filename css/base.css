@@ -1,0 +1,58 @@
+/* ===========================
+   VARIABLES DE DISEÑO
+=========================== */
+:root {
+  --color-primario: #0d6efd;
+  --color-texto: #222;
+  --color-subtexto: #444;
+  --color-fondo: #ffffff;
+  --color-suave: #f4f4f4;
+  --color-sombra: rgba(0, 0, 0, 0.08);
+
+  --espaciado: 1.2rem;
+  --bordes: 10px;
+  --transicion: 0.3s ease;
+
+  --hero-bg: linear-gradient(to right,
+      rgba(245, 245, 245, 0),
+      rgba(245, 245, 245, 0.5)),
+    url("/svg/common-bg.svg");
+}
+
+/* ===========================
+   FUENTE
+=========================== */
+@font-face {
+  font-family: "Chilanka";
+  src: url("../fonts/Chilanka-Regular.ttf");
+}
+
+/* ===========================
+   RESET
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===========================
+   BODY
+=========================== */
+body {
+  font-family: "Chilanka", sans-serif;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  scroll-behavior: smooth;
+}
+
+/* ===========================
+   BODY DARK (variables)
+=========================== */
+body.dark {
+  --color-texto: #e6e6e6;
+  --color-subtexto: #bdbdbd;
+  --color-fondo: #121212;
+  --color-suave: #1d1d1d;
+  --color-sombra: rgba(0, 0, 0, 0.6);
+}

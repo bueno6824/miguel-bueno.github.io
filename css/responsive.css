@@ -1,0 +1,22 @@
+@media (max-width: 992px) {
+  .acerca-contenido {
+    grid-template-columns: 1fr;
+  }
+
+  .redes-flotantes {
+    display: none;
+  }
+
+  .titulo-principal {
+    font-size: 2.2rem;
+  }
+
+  .avatar-img {
+    width: 150px;
+  }
+
+  .nav-dark-toggle {
+    justify-content: center;
+    margin: 1rem 0;
+  }
+}

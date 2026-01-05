@@ -1,0 +1,90 @@
+/* ===========================
+   BOTONES / ICONOS / TOGGLES
+=========================== */
+
+/* Hamburguesa */
+.navbar-toggler-icon,
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  background: currentColor;
+}
+
+/* Animación navbar */
+.navbar-collapse.show {
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll progress */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background: linear-gradient(90deg, #6c63ff, #00d4ff);
+  z-index: 2000;
+}
+
+/* ===========================
+   TOGGLE DARK
+=========================== */
+.toggle_dark {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.toggle_dark .icon {
+  position: absolute;
+  font-size: 1.2rem;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.toggle_dark .sun {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.toggle_dark .moon {
+  transform: scale(1);
+  opacity: 1;
+}
+
+body.dark .toggle_dark .sun {
+  transform: scale(1);
+  opacity: 1;
+}
+
+body.dark .toggle_dark .moon {
+  transform: scale(0);
+  opacity: 0;
+}
+
+/* ===========================
+   TRANSICIONES CONTROLADAS
+=========================== */
+* {
+  transition:
+    background-color var(--transicion),
+    color var(--transicion),
+    box-shadow var(--transicion),
+    transform var(--transicion);
+}

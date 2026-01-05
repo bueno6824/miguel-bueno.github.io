@@ -1,0 +1,167 @@
+/* ===========================
+   HEADER / NAVBAR
+=========================== */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: transparent;
+  box-shadow: none;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar {
+  padding: 0.3rem 2rem;
+  background: var(--color-fondo);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Scroll */
+.header.scrolled .navbar {
+  background: var(--color-fondo);
+  box-shadow: 0 2px 10px var(--color-sombra);
+}
+
+.header.oculto {
+  transform: translateY(-100%);
+}
+
+/* NAV LINKS */
+.navbar .nav-link,
+.navbar .logo-texto {
+  color: var(--color-texto);
+}
+
+.navbar-nav .nav-link {
+  margin: 0 0.4rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--color-primario);
+}
+
+/* LOGO */
+.contenedor-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.logo-img {
+  width: 42px;
+  height: 42px;
+}
+
+.logo-texto {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.contenedor-menu {
+  margin-left: auto;
+}
+
+/* BOTÓN CONTACTO */
+.btn-contacto {
+  background: var(--color-primario);
+  padding: 0.4rem 1rem;
+  border-radius: var(--bordes);
+  color: #fff !important;
+  margin-left: 1rem;
+  transition: var(--transicion);
+}
+
+.btn-contacto:hover {
+  opacity: 0.85;
+}
+
+/* NAV ACTIVO */
+.nav-link {
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav-link.active {
+  color: var(--color-primario);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 3px;
+  background: var(--color-primario);
+  border-radius: 2px;
+}
+
+/* ===========================
+   BOTÓN IR ARRIBA
+=========================== */
+#btn-ir-arriba {
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-primario);
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease, transform .3s ease;
+  z-index: 9999;
+}
+
+#btn-ir-arriba.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#btn-ir-arriba:hover {
+  transform: scale(1.1);
+}
+
+#btn-ir-arriba.footer-visible {
+  bottom: 70px;
+}
+
+/* ===========================
+   FOOTER (estructura)
+=========================== */
+.footer {
+  padding: 1.5rem 2rem;
+  backdrop-filter: blur(10px);
+  border-radius: 12px 12px 0 0;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-text {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.footer-redes img {
+  width: 24px;
+  height: 24px;
+}

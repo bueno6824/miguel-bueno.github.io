@@ -1,0 +1,56 @@
+/* ===========================
+   MODAL CONTACTO
+=========================== */
+.modal-content {
+   background: var(--color-fondo);
+   color: var(--color-texto);
+   border-radius: var(--bordes);
+}
+
+.modal-header,
+.modal-footer {
+   background: var(--color-fondo);
+   color: var(--color-texto);
+   border: none;
+}
+
+.modal-body h5 {
+   font-weight: 600;
+   margin-bottom: 1rem;
+}
+
+#form-contacto input,
+#form-contacto textarea {
+   background: var(--color-suave);
+   color: var(--color-texto);
+   border-radius: 10px;
+   border: 1px solid var(--color-sombra);
+   transition: 0.3s ease;
+}
+
+#form-contacto input:focus,
+#form-contacto textarea:focus {
+   border-color: var(--color-primario);
+   box-shadow: 0 0 6px rgba(13, 110, 253, 0.4);
+   outline: none;
+}
+
+body.dark .btn-close {
+   filter: invert(1);
+}
+
+body.dark .modal-body img {
+   filter: brightness(0.9) contrast(1.05);
+}
+
+/* MODAL PROYECTO */
+.modal-body p {
+   color: var(--color-subtexto);
+   font-size: 1rem;
+   line-height: 1.6;
+}
+
+.modal-body img {
+   max-height: 320px;
+   object-fit: cover;
+}
