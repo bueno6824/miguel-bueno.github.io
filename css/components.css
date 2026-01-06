@@ -1,5 +1,5 @@
 /* ===========================
-   BOTONES / ICONOS / TOGGLES
+   BOTONES / ICONOS / TOGGLES  (components.css)
 =========================== */
 
 /* Animación navbar */
@@ -71,7 +71,7 @@ body.dark .navbar-toggler {
   height: 4px;
   width: 0%;
   background: linear-gradient(90deg, #6c63ff, #00d4ff);
-  z-index: 2000;
+  z-index: 9999;
 }
 
 /* ===========================

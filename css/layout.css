@@ -1,5 +1,5 @@
 /* ===========================
-   HEADER / NAVBAR
+   HEADER / NAVBAR  (layout.css)
 =========================== */
 .header {
   position: fixed;
@@ -15,6 +15,7 @@
   padding: 0.3rem 2rem;
   background: var(--color-fondo);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 9999;
 }
 
 /* Scroll */

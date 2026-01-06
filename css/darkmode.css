@@ -56,3 +56,11 @@ body.dark .footer-datetime {
 body.dark #footer-date {
     color: #bdbdbd;
 }
+
+.theme-icon {
+    transition: transform 0.3s ease;
+}
+
+.toggle_dark:active .theme-icon {
+    transform: rotate(180deg);
+}
