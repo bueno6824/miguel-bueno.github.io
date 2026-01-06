@@ -6,6 +6,8 @@ import './navbar.js';
 import './modals.js';
 import './darkmode.js';
 import './email.js';
+import './datetime.js';
+
 
 
 // Aquí podrías agregar código general si lo necesitas
