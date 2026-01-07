@@ -10,6 +10,10 @@ body.dark .navbar .logo-texto {
     color: #f1f1f1;
 }
 
+.navbar-toggler-icon {
+    filter: invert(1)brightness(1);
+}
+
 /* ===========================
    HERO OVERLAY
 =========================== */
@@ -24,6 +28,10 @@ body.dark .footer {
     background: rgba(0, 0, 0, 0.35);
     color: #f5f5f5;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#btn-ir-arriba img {
+    filter: invert(1) brightness(1);
 }
 
 /* ICONOS FOOTER */

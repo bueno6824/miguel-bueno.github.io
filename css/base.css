@@ -51,6 +51,11 @@ body {
   scroll-behavior: smooth;
 }
 
+body.dark .tarjeta-herramienta img.logo-dark-fix {
+  filter: invert(1) brightness(1.1);
+}
+
+
 #visual-layer {
   position: fixed;
   inset: 0;
