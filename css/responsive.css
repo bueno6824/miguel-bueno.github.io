@@ -20,3 +20,44 @@
     margin: 1rem 0;
   }
 }
+
+/* ===========================
+   FOOTER RESPONSIVE (MÓVIL)
+=========================== */
+@media (max-width: 576px) {
+  .footer {
+    padding: 1.2rem 1rem 2rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: center;
+  }
+
+  .footer-text {
+    font-size: 0.9rem;
+    order: 1;
+  }
+
+  .footer-datetime {
+    order: 2;
+    font-size: 0.8rem;
+  }
+
+  .footer-redes {
+    order: 3;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .footer-redes img {
+    width: 26px;
+    height: 26px;
+  }
+
+  #btn-ir-arriba {
+    bottom: 90px;
+    right: 20px;
+  }
+}
