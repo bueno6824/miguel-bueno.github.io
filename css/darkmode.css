@@ -38,6 +38,7 @@ body.dark .logo-img {
     filter: invert(1) brightness(2);
 }
 
+
 /* ICONOS FOOTER */
 body.dark .footer-redes img {
     filter: invert(1) brightness(1.2);
