@@ -28,9 +28,9 @@ window.initMap = () => {
     });
 };
 
-/* 👇 REACCIONA A CAMBIOS DE TEMA */
+/* Reacciona al cambio de tema */
 document.addEventListener("themeChanged", () => {
-    if (!map) return;
+    if (!map || !window.google) return;
 
     const isDark = document.body.classList.contains("dark");
     map.setOptions({
