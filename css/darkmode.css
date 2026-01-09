@@ -38,6 +38,9 @@ body.dark .logo-img {
     filter: invert(1) brightness(2);
 }
 
+body.dark .icono-red img {
+    filter: invert(1) brightness(1);
+}
 
 /* ICONOS FOOTER */
 body.dark .footer-redes img {

@@ -90,7 +90,7 @@ body.dark .seccion-inicio::before {
 .icono-red img {
   width: 22px;
   transition: var(--transicion);
-  filter: invert(1);
+  filter: invert(0) brightness(1);
 }
 
 .icono-red:hover img {
