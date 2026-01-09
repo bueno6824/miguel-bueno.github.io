@@ -1,6 +1,3 @@
-/* ===========================
-   VARIABLES DE DISEÑO (base.css)
-=========================== */
 :root {
   --color-primario: #0d6efd;
   --color-texto: #222;
@@ -9,14 +6,8 @@
   --color-suave: #f4f4f4;
   --color-sombra: rgba(0, 0, 0, 0.08);
 
-  --espaciado: 1.2rem;
-  --bordes: 10px;
-  --transicion: 0.3s ease;
-
-  /* NUEVAS: respiración visual */
   --luz-global: 1;
   --tono-calido: 0deg;
-  --blur-global: 0px;
 
   --hero-bg: linear-gradient(to right,
       rgba(245, 245, 245, 0),
@@ -24,35 +15,19 @@
     url("/svg/common-bg.svg");
 }
 
-/* ===========================
-   FUENTE
-=========================== */
-@font-face {
-  font-family: "Chilanka";
-  src: url("../fonts/Chilanka-Regular.ttf");
+html.dark {
+  --color-texto: #e6e6e6;
+  --color-subtexto: #bdbdbd;
+  --color-fondo: #121212;
+  --color-suave: #1d1d1d;
+  --color-sombra: rgba(0, 0, 0, 0.6);
 }
 
-/* ===========================
-   RESET
-=========================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* ===========================
-   BODY
-=========================== */
 body {
   font-family: "Chilanka", sans-serif;
   background: var(--color-fondo);
   color: var(--color-texto);
   scroll-behavior: smooth;
-}
-
-body.dark .tarjeta-herramienta img.logo-dark-fix {
-  filter: invert(1) brightness(1.1);
 }
 
 
@@ -66,16 +41,4 @@ body.dark .tarjeta-herramienta img.logo-dark-fix {
     brightness(var(--luz-global)) hue-rotate(var(--tono-calido));
 
   transition: filter 1.5s ease;
-}
-
-
-/* ===========================
-   BODY DARK (variables)
-=========================== */
-body.dark {
-  --color-texto: #e6e6e6;
-  --color-subtexto: #bdbdbd;
-  --color-fondo: #121212;
-  --color-suave: #1d1d1d;
-  --color-sombra: rgba(0, 0, 0, 0.6);
 }

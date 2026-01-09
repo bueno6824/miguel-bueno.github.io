@@ -8,6 +8,34 @@
     content="Portafolio de Miguel Ángel, desarrollador web Frontend con proyectos en HTML, CSS y JavaScript.">
 
   <title>Portafolio - Miguel</title>
+
+  <style>
+    html {
+      visibility: hidden;
+    }
+  </style>
+
+
+  <script>
+    (function () {
+      const theme = localStorage.getItem('theme');
+      const root = document.documentElement;
+
+      if (theme === 'dark') {
+        root.classList.add('dark');
+      } else if (theme === 'light') {
+        root.classList.remove('dark');
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        root.classList.add('dark');
+      }
+
+      root.style.visibility = 'visible';
+    })();
+  </script>
+
+
+
+
   <!-- Favicon modo claro -->
   <link rel="icon" media="(prefers-color-scheme: light)" href="img/favicon-dark-2.png" type="image/png">
 

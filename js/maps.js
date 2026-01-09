@@ -8,32 +8,44 @@ const darkMapStyle = [
     { featureType: "water", elementType: "geometry", stylers: [{ color: "#0f1a24" }] }
 ];
 
+// 👉 función única para aplicar tema
+function applyMapTheme() {
+    if (!map) return;
+
+    const isDark = document.documentElement.classList.contains("dark");
+
+    map.setOptions({
+        styles: isDark ? darkMapStyle : []
+    });
+}
+
+// 👉 Google Maps callback
 window.initMap = () => {
     const mapContainer = document.getElementById("map");
     if (!mapContainer) return;
 
     const leon = { lat: 21.125, lng: -101.685 };
-    const isDark = document.body.classList.contains("dark");
 
+    // 1️⃣ crear mapa neutro
     map = new google.maps.Map(mapContainer, {
         zoom: 12,
         center: leon,
-        styles: isDark ? darkMapStyle : [],
+        styles: []
     });
 
     new google.maps.Marker({
         position: leon,
         map,
-        title: "Estoy en León 🚀",
+        title: "Estoy en León 🚀"
+    });
+
+    // 2️⃣ aplicar tema cuando el DOM ya está pintado
+    requestAnimationFrame(() => {
+        applyMapTheme();
     });
 };
 
-/* Reacciona al cambio de tema */
+// 3️⃣ reaccionar a cambios de tema
 document.addEventListener("themeChanged", () => {
-    if (!map || !window.google) return;
-
-    const isDark = document.body.classList.contains("dark");
-    map.setOptions({
-        styles: isDark ? darkMapStyle : []
-    });
+    applyMapTheme();
 });

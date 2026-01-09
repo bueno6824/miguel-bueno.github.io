@@ -1,28 +1,25 @@
+// darkmode.js
 export { };
 
 const toggleDark = document.getElementById("toggle_dark");
 const icon = toggleDark?.querySelector(".theme-icon");
+const root = document.documentElement;
 
-let mode = localStorage.getItem("modo") || "auto";
-
-localStorage.getItem("modo")
-
+let mode = localStorage.getItem("theme") || "auto";
 
 const setVisualTheme = (theme) => {
-    const root = document.documentElement;
+    root.classList.toggle("dark", theme === "dark");
 
     if (theme === "dark") {
-        document.body.classList.add("dark");
         root.style.setProperty("--luz-global", "0.85");
         root.style.setProperty("--tono-calido", "15deg");
-        if (icon) icon.textContent = "🌙";
+        icon && (icon.textContent = "🌙");
     }
 
     if (theme === "light") {
-        document.body.classList.remove("dark");
         root.style.setProperty("--luz-global", "1");
         root.style.setProperty("--tono-calido", "0deg");
-        if (icon) icon.textContent = "☀️";
+        icon && (icon.textContent = "☀️");
     }
 
     document.dispatchEvent(new Event("themeChanged"));
@@ -30,17 +27,11 @@ const setVisualTheme = (theme) => {
 
 const applyAutoTheme = () => {
     const hour = new Date().getHours();
-
-    if (hour >= 7 && hour < 19) {
-        setVisualTheme("light");
-    } else {
-        setVisualTheme("dark");
-    }
-
-    if (icon) icon.textContent = "🕑";
+    const isDay = hour >= 7 && hour < 19;
+    setVisualTheme(isDay ? "light" : "dark");
+    icon && (icon.textContent = "🕑");
 };
 
-// inicialización
 const init = () => {
     if (mode === "auto") applyAutoTheme();
     else setVisualTheme(mode);
@@ -48,17 +39,14 @@ const init = () => {
 
 init();
 
-// ciclo: auto → light → dark → auto
 toggleDark?.addEventListener("click", () => {
     mode = mode === "auto" ? "light" : mode === "light" ? "dark" : "auto";
-    localStorage.setItem("modo", mode);
+    localStorage.setItem("theme", mode);
 
     if (mode === "auto") applyAutoTheme();
     else setVisualTheme(mode);
 });
 
-// auto se vuelve a evaluar cada minuto
 setInterval(() => {
     if (mode === "auto") applyAutoTheme();
 }, 60_000);
-
