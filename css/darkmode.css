@@ -10,7 +10,7 @@ html.dark .navbar .logo-texto {
     color: #f1f1f1;
 }
 
-.navbar-toggler-icon {
+html.dark .navbar-toggler-icon {
     filter: invert(1)brightness(1);
 }
 
@@ -30,7 +30,7 @@ html.dark .footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-#btn-ir-arriba img {
+html.dark #btn-ir-arriba img {
     filter: invert(1) brightness(1);
 }
 
@@ -79,4 +79,12 @@ html.dark #footer-date {
 
 .toggle_dark:active .theme-icon {
     transform: rotate(180deg);
+}
+
+html.dark .carousel-control-prev {
+    filter: invert(1) brightness(1);
+}
+
+html.dark .carousel-control-next {
+    filter: invert(1) brightness(1);
 }

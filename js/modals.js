@@ -1,24 +1,60 @@
 // modals.js
-export { }; // si no exporta nada específico, esto indica que es un módulo
-
+export { };
 
 // Abrir modal contacto
 function abrirModal(idModal) {
     const modal = document.getElementById(idModal);
-    if (modal) $(modal).modal('show');
+    if (modal && window.$) {
+        $(modal).modal('show');
+    }
 }
 
-// Abrir modal proyecto
+// Modal proyecto
 const botonesVerMas = document.querySelectorAll(".btn-ver-mas");
-botonesVerMas.forEach(boton => {
-    boton.addEventListener("click", () => {
-        const titulo = boton.dataset.titulo;
-        const imagen = boton.dataset.imagen;
-        const descripcion = boton.dataset.descripcion;
 
-        document.getElementById("modalTitulo").textContent = titulo;
-        document.getElementById("modalImagen").src = imagen;
-        document.getElementById("modalImagen").alt = titulo;
-        document.getElementById("modalDescripcion").textContent = descripcion;
+const modalTitulo = document.getElementById("modalTitulo");
+const modalDescripcion = document.getElementById("modalDescripcion");
+const carouselInner = document.getElementById("carouselInner");
+
+if (modalTitulo && modalDescripcion && carouselInner) {
+    botonesVerMas.forEach(boton => {
+        boton.addEventListener("click", () => {
+            const titulo = boton.dataset.titulo || "";
+            const descripcion = boton.dataset.descripcion || "";
+            const imagenes = JSON.parse(boton.dataset.imagenes || "[]");
+
+            modalTitulo.textContent = titulo;
+
+            modalDescripcion.innerHTML = descripcion.replace(/\n/g, "<br>");
+
+            // Reset carrusel
+            carouselInner.innerHTML = "";
+
+            imagenes.forEach((src, index) => {
+                const item = document.createElement("div");
+                item.className = `carousel-item ${index === 0 ? "active" : ""}`;
+
+                item.innerHTML = `
+                    <img src="${src}" class="d-block w-100 rounded" alt="${titulo}">
+                `;
+
+                carouselInner.appendChild(item);
+            });
+
+            // Fuerza slide 0 (Bootstrap)
+            const carousel = document.querySelector('#carouselProyecto');
+
+            if (carousel && bootstrap?.Carousel) {
+                const instance = bootstrap.Carousel.getOrCreateInstance(carousel, {
+                    interval: 3500,
+                    ride: 'carousel',
+                    pause: 'hover'
+                });
+
+                instance.to(0);
+                instance.cycle(); // 👈 vuelve a moverse solo
+            }
+
+        });
     });
-});
+}
