@@ -58,3 +58,15 @@ if (modalTitulo && modalDescripcion && carouselInner) {
         });
     });
 }
+
+const btnArriba = document.getElementById("btn-ir-arriba");
+
+// Cuando se abre CUALQUIER modal
+document.addEventListener('show.bs.modal', () => {
+    if (btnArriba) btnArriba.classList.add("oculto-modal");
+});
+
+// Cuando se cierra CUALQUIER modal
+document.addEventListener('hidden.bs.modal', () => {
+    if (btnArriba) btnArriba.classList.remove("oculto-modal");
+});

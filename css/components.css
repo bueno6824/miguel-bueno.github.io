@@ -125,3 +125,9 @@ body.dark .toggle_dark .moon {
     box-shadow var(--transicion),
     transform var(--transicion);
 }
+
+#btn-ir-arriba.oculto-modal {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+}
