@@ -5,6 +5,7 @@
   --color-fondo: #ffffff;
   --color-suave: #f4f4f4;
   --color-sombra: rgba(0, 0, 0, 0.08);
+  --bordes: 10px;
 
   --luz-global: 1;
   --tono-calido: 0deg;
