@@ -96,3 +96,7 @@ html.dark .proyectos-filtros {
 html.dark .proyecto-card.destacado {
     box-shadow: 0 10px 30px rgb(255, 255, 255, .30);
 }
+
+html.dark .btn-ver-mas {
+    background: var(--color-acento);
+}

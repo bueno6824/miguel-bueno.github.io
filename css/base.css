@@ -10,6 +10,27 @@
   --luz-global: 1;
   --tono-calido: 0deg;
 
+  /* UI */
+  --color-card: #ffffff;
+  --color-card-hover: #f0f0f0;
+  --color-borde: rgba(0, 0, 0, 0.08);
+
+  /* Inputs */
+  --color-input-bg: #ffffff;
+  --color-input-text: #222;
+  --color-input-border: #dcdcdc;
+
+  /* Botones filtro */
+  --color-filtro-bg: #f4f4f4;
+  --color-filtro-text: #222;
+  --color-filtro-active-bg: var(--color-primario);
+  --color-filtro-active-text: #ffffff;
+
+  /* Stats */
+  --color-stat-bg: #f4f4f4;
+  --color-stat-text: #222;
+
+
   --hero-bg: linear-gradient(to right,
       rgba(245, 245, 245, 0),
       rgba(245, 245, 245, 0.5)),
@@ -22,6 +43,22 @@ html.dark {
   --color-fondo: #121212;
   --color-suave: #1d1d1d;
   --color-sombra: rgba(0, 0, 0, 0.6);
+  --color-acento: #0d6efd;
+  --color-card: #1a1a1a;
+  --color-card-hover: #222;
+  --color-borde: rgba(255, 255, 255, 0.08);
+
+  --color-input-bg: #1d1d1d;
+  --color-input-text: #e6e6e6;
+  --color-input-border: #333;
+
+  --color-filtro-bg: #1d1d1d;
+  --color-filtro-text: #e6e6e6;
+  --color-filtro-active-bg: var(--color-primario);
+  --color-filtro-active-text: #ffffff;
+
+  --color-stat-bg: #1d1d1d;
+  --color-stat-text: #e6e6e6;
 }
 
 body {

@@ -159,18 +159,18 @@ html.dark .seccion-inicio::before {
 
 /* PROYECTOS */
 .tarjeta-proyecto {
-  position: relative;
-  background: var(--color-fondo);
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
-  transition: 0.3s ease;
+  background: var(--color-card);
+  border-radius: var(--bordes);
+  box-shadow: 0 10px 30px var(--color-sombra);
+  border: 1px solid var(--color-borde);
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .tarjeta-proyecto:hover {
+  background: var(--color-card-hover);
   transform: translateY(-6px);
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.35);
 }
+
 
 .contenido-proyecto h3 {
   color: var(--color-texto);
@@ -224,6 +224,26 @@ html.dark .seccion-inicio::before {
   padding: 10px;
 }
 
+.proyecto-stats {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 0.8rem 0;
+  flex-wrap: wrap;
+}
+
+.proyecto-stats span {
+  background: var(--color-tag-bg);
+  color: var(--color-tag-texto);
+  padding: 0.35rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+
 .proyecto-card {
   transition:
     opacity 0.4s ease,
@@ -237,16 +257,101 @@ html.dark .seccion-inicio::before {
   position: absolute;
 }
 
-.filtros-proyectos .filtro-btn.active {
-  background: var(--color-primario);
-  color: #fff;
+
+.filtros-proyectos {
+  max-width: 420px;
+  display: contents;
 }
 
-.proyecto-card.destacado {
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
-  transform: scale(1.02);
+.filtro-btn {
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-borde);
+  background: var(--color-filtro-bg);
+  color: var(--color-filtro-text);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
+
+.filtro-btn:hover {
+  background: var(--color-card-hover);
+}
+
+.filtro-btn.active {
+  background: var(--color-filtro-active-bg);
+  color: var(--color-filtro-active-text);
+  border-color: transparent;
+}
+
+
+.buscador-proyectos {
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto 2rem;
+  display: inline-block;
+  background: var(--color-input-bg);
+  color: var(--color-input-texto);
+  border: 1px solid var(--color-borde);
+  border-radius: 30px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buscador-proyectos::placeholder {
+  color: var(--color-subtexto);
+}
+
+.buscador-proyectos:focus {
+  outline: none;
+  border-color: var(--color-acento);
+  box-shadow: 0 0 0 3px var(--color-acento-soft);
+}
+
+
+.buscador-proyectos:focus {
+  border-color: var(--color-primario);
+  box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.25);
+}
+
+.btn-ver-mas {
+  background: var(--color-acento);
+  border: none;
+  color: var(--color-texto);
+  padding: 0.45rem 1.2rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.30);
+}
+
+.btn-ver-mas:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px var(--color-sombra);
+}
+
+
+.destacado {
+  background: var(--color-card);
+  border-radius: var(--bordes);
+  box-shadow: 0 8px 30px var(--color-sombra);
+  border: 1px solid var(--color-borde);
+  padding: 1rem;
+  margin-bottom: 3rem;
+  transition: background 0.3s ease;
+}
+
+.destacado h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.destacado p {
+  color: var(--color-subtexto);
+}
+
 
 .proyecto-card.destacado h3::after {
   content: " ⭐ DESTACADO";
@@ -254,15 +359,7 @@ html.dark .seccion-inicio::before {
   color: var(--color-primario);
 }
 
-.proyecto-stats {
-  display: flex;
-  justify-content: center;
-  gap: .8rem;
-  font-size: .8rem;
-  opacity: .8;
-  margin-top: .5rem;
-  flex-wrap: wrap;
-}
+
 
 
 
