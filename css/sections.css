@@ -17,7 +17,7 @@
   z-index: 1;
 }
 
-body.dark .seccion-inicio::before {
+html.dark .seccion-inicio::before {
   background: rgba(0, 0, 0, 0.7);
 }
 
@@ -223,6 +223,48 @@ body.dark .seccion-inicio::before {
 .contenido-proyecto {
   padding: 10px;
 }
+
+.proyecto-card {
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+.proyecto-card.oculto {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+  position: absolute;
+}
+
+.filtros-proyectos .filtro-btn.active {
+  background: var(--color-primario);
+  color: #fff;
+}
+
+.proyecto-card.destacado {
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
+  transform: scale(1.02);
+}
+
+.proyecto-card.destacado h3::after {
+  content: " ⭐ DESTACADO";
+  font-size: 0.75rem;
+  color: var(--color-primario);
+}
+
+.proyecto-stats {
+  display: flex;
+  justify-content: center;
+  gap: .8rem;
+  font-size: .8rem;
+  opacity: .8;
+  margin-top: .5rem;
+  flex-wrap: wrap;
+}
+
+
 
 /* HERRAMIENTAS - Estilo Glassmorphism */
 .tarjeta-herramienta {

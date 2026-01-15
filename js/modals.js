@@ -70,3 +70,4 @@ document.addEventListener('show.bs.modal', () => {
 document.addEventListener('hidden.bs.modal', () => {
     if (btnArriba) btnArriba.classList.remove("oculto-modal");
 });
+

@@ -5,6 +5,9 @@ import './darkmode.js';
 import './modals.js';
 import './email.js';
 import './datetime.js';
+import './filters.js';
+import './search.js';
+
 
 // 👇 Lazy load del mapa
 const mapContainer = document.querySelector('#map');
