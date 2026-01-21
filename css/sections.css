@@ -44,7 +44,8 @@ html.dark .seccion-inicio::before {
 
 .avatar-img {
   margin-top: 1.5rem;
-  width: 180px;
+  width: 250px;
+  margin-bottom: 1.5rem;
 }
 
 .inicio-boton .btn--bg {
