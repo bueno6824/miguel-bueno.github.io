@@ -100,3 +100,7 @@ html.dark .proyecto-card.destacado {
 html.dark .btn-ver-mas {
     background: var(--color-acento);
 }
+
+html.dark .logo-dark-fix {
+    filter: invert(1) brightness(1.3);
+}
