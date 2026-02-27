@@ -37,6 +37,12 @@
     url("/svg/common-bg.svg");
 }
 
+@font-face {
+  font-family: 'Chilanka';
+  /* Nombre que usarás en CSS */
+  src: url('../fonts/Chilanka-Regular.ttf');
+}
+
 html.dark {
   --color-texto: #e6e6e6;
   --color-subtexto: #bdbdbd;
